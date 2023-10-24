@@ -6,4 +6,6 @@ href="https://codeclimate.com/github/mur-misha/python-project-49/maintainability
 src="https://api.codeclimate.com/v1/badges/827a3117e7c795648e01/maintainability" 
 /></a>
 
-https://asciinema.org/connect/e014fecc-a9af-4089-9168-a64b75be4225
+[![asciicast](https://asciinema.org/a/u0dzgPmnTMMqsZPD633PY1H8B.svg)](https://asciinema.org/a/u0dzgPmnTMMqsZPD633PY1H8B)
+
+[![asciicast](https://asciinema.org/a/XzAud3dpXFlVi0d0GkmNxwUCB.svg)](https://asciinema.org/a/XzAud3dpXFlVi0d0GkmNxwUCB
