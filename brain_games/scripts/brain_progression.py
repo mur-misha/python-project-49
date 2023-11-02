@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from brain_games.common_func import welcome_user
 import random
 
@@ -5,10 +7,12 @@ import random
 def main():
     progression()
 
+
 def progression():
     user_name = welcome_user()
     print('What number is missing in the progression?')
     right_answer = 0
+
     while right_answer < 3:
         num1 = random.randint(1, 100)
         step = random.randint(2, 10)
@@ -23,12 +27,13 @@ def progression():
         answer = int(input())
 
         if answer == rnd_num:
-            print(f"Your answer: {answer}")
-            print(f'Correct')
+            print(f"Your answer: {answer}\n"
+                  f"Correct")
             right_answer += 1
         else:
-            print(f"Your answer: {answer}")
-            print(f"'{answer}' is wrong answer ;(. Correct answer was {rnd_num}\nLet's try again, {user_name}!")
+            print(f"Your answer: {answer}\n"
+                  f"{answer} is wrong answer ;(. Correct answer was {rnd_num}\n"
+                  f"Let's try again, {user_name}!")
             break
 
     else:
@@ -37,4 +42,3 @@ def progression():
 
 if __name__ == '__main__':
     main()
-
