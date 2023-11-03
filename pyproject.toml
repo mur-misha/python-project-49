@@ -1,9 +1,16 @@
 [tool.poetry]
 name = "hexlet-code"
+
 version = "0.1.0"
-description = ""
-authors = ["Mikhail <lissen.ku6@gmail.com>"]
+
+description = "my first project 5 brain-games"
+
+authors = [
+    "Mikhail <lissen.ku6@gmail.com>"
+]
+
 readme = "README.md"
+
 packages = [
   { include = "brain_games" },
 ]

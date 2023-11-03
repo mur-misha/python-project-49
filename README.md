@@ -1,3 +1,12 @@
+### 				"Brain Games"
+
+    Данный проект был разработан в процессе обучения на платформе Hexlet.
+Он содержит в себе сборник из пяти математических игр, таких как "Четное - нечетное", "Пропущенный элемент", 
+"Решение случайного выражения" и др. Проект был написан на языке программирования Python с использованием простейших
+функций и логики языка.
+
+###
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/mur-misha/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/mur-misha/python-project-49/actions)
 
