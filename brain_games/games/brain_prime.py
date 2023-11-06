@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from brain_games.common_func import welcome_user
+from brain_games.scripts.common_func import welcome_user
 import random
 
 

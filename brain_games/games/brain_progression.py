@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from brain_games.common_func import welcome_user
+from brain_games.scripts.common_func import welcome_user
 import random
 
 
@@ -14,25 +14,28 @@ def progression():
     right_answer = 0
 
     while right_answer < 3:
-        num1 = random.randint(1, 100)
+        num = random.randint(1, 100)
         step = random.randint(2, 10)
 
-        random_list = [num1 + step * i for i in range(10)]
+        random_list = [num + step * i for i in range(10)]
 
-        rnd_index = random.randint(0, 7)
+        rnd_index = random.randint(0, 9)
         rnd_num = random_list[rnd_index]
         random_list[rnd_index] = '...'
 
         print(f"Question: {' '.join(map(str, random_list))}")
-        answer = int(input())
-
+        answer = input('Your answer: ')
+        try:
+            answer = int(answer)
+        except ValueError:
+            print(f'{answer} is wrong answer. Correct answer was {rnd_num}\n'
+                  f'Let\'s try again, {user_name}!')
+            break
         if answer == rnd_num:
-            print(f"Your answer: {answer}\n"
-                  f"Correct")
+            print("Correct")
             right_answer += 1
         else:
-            print(f"Your answer: {answer}\n"
-                  f"{answer} is wrong answer ;(. Correct answer was {rnd_num}\n"
+            print(f"{answer} is wrong answer ;(. Correct answer was {rnd_num}\n"
                   f"Let's try again, {user_name}!")
             break
 

@@ -2,7 +2,7 @@
 
 
 from random import choice
-from brain_games.common_func import welcome_user, random_num
+from brain_games.scripts.common_func import welcome_user, random
 
 
 def main():
@@ -19,7 +19,6 @@ def result(oper, a, b) -> int:
 
 
 def game():
-
     user_name = welcome_user()
     print('What is the result of the expression?')
     right_answer_count = 0
@@ -27,26 +26,26 @@ def game():
 
     while right_answer_count < 3:
 
-        a = random_num()
-        b = random_num()
+        num1 = random()
+        num2 = random()
         oper = choice(operations)
-        res = result(oper, a, b)
-        print(f'Question: {a} {oper} {b}')
-        user_answer = input()
+        res = result(oper, num1, num2)  # result of expression
+        print(f'Question: {num1} {oper} {num2}')
+        user_answer = input('Your answer: ')
         try:
             user_answer = int(user_answer)
         except ValueError:
-            print(f'Your answer: {user_answer}\n'
-                  f'{user_answer} is wrong answer. Correct answer was {res}\n'
+            print(f'{user_answer} is wrong answer.\n'
+                  f'Correct answer was {res}\n'
                   f'Let\'s try again, {user_name}!')
             break
 
         if user_answer == res:
-            print(f'Your answer: {user_answer}\nCorrect!')
+            print('Correct!')
             right_answer_count += 1
         else:
-            print(f'Your answer: {user_answer}\n'
-                  f'{user_answer} is wrong answer. Correct answer was {res}\n'
+            print(f'{user_answer} is wrong answer.\n'
+                  f'Correct answer was {res}\n'
                   f'Let\'s try again, {user_name}!')
             break
     else:

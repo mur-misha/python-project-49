@@ -9,5 +9,5 @@ def welcome_user() -> str:
     return name
 
 
-def random_num():
+def random():
     return randint(1, 50)

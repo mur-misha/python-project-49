@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-from random import randint
-from brain_games.common_func import welcome_user
+
+from brain_games.scripts.common_func import welcome_user, random
 
 
 def main():
@@ -17,7 +17,7 @@ def game():
     right_answer_count = 0
 
     while right_answer_count < 3:
-        random_number = randint(1, 50)
+        random_number = random()
         print(f"Question: {random_number}")
         user_answer = input('Your answer: ').lower()
 
