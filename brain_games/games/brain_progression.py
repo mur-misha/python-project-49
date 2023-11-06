@@ -21,7 +21,7 @@ def progression():
 
         rnd_index = random.randint(0, 9)
         rnd_num = random_list[rnd_index]
-        random_list[rnd_index] = '...'
+        random_list[rnd_index] = '..'
 
         print(f"Question: {' '.join(map(str, random_list))}")
         answer = input('Your answer: ')
