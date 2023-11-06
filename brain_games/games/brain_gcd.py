@@ -7,6 +7,17 @@ def main():
     brain_gcd()
 
 
+def common_divisor(a, b):
+    div1 = []
+    div2 = []
+    for i in range(1, a + 1):
+        div1.append(a / i)
+    for i in range(1, b + 1):
+        div2.append(b / i)
+    divisor = int(max(list(set(div1).intersection(set(div2)))))
+    return divisor
+
+
 def brain_gcd():
     user_name = welcome_user()
     right_answer_count = 0
@@ -15,32 +26,23 @@ def brain_gcd():
     while right_answer_count < 3:
         num1 = random()
         num2 = random()
-        div1 = []
-        div2 = []
         print(f'Question: {num1} {num2}')
-
-        for i in range(1, num1 + 1):
-            div1.append(num1 / i)
-        for i in range(1, num2 + 1):
-            div2.append(num2 / i)
-
-        divisor = int(max(list(set(div1).intersection(set(div2)))))
         user_answer = input('Your answer: ')
 
         try:
             user_answer = int(user_answer)
         except ValueError:
             print(f'{user_answer} is wrong answer.\n'
-                  f'Correct answer was {divisor}\n'
+                  f'Correct answer was {common_divisor(num1, num2)}\n'
                   f'Let\'s try again, {user_name}!')
             break
 
-        if user_answer == divisor:
+        if user_answer == common_divisor(num1, num2):
             print('Correct!')
             right_answer_count += 1
         else:
             print(f"'{user_answer}' is wrong answer;(.\n"
-                  f"Correct answer was '{divisor}'.\n"
+                  f"Correct answer was '{common_divisor(num1, num2)}'.\n"
                   f"Let's try again, {user_name}!")
             break
     else:
